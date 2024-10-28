@@ -1,0 +1,17 @@
+package edu.kh.note.book;
+
+public class Block {
+
+	public void block() {
+		
+		for (int y = 0; y <= 1000; y++) {
+			for (int x = 0; x <= 100; x++) {
+				if (x == 1 || x == 100 || y == 1|| y == 1000 ) {
+					
+					System.out.println("*");
+				}
+			}
+		}
+		
+	}
+}

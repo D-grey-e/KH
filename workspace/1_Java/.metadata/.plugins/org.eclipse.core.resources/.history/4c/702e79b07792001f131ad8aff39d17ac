@@ -1,0 +1,12 @@
+package edu.kh.array.ex;
+
+public class ArrayRun {
+	
+	public static void main(String[] args) {
+		
+		ArryExample1 ae = new ArryExample1(); 
+		
+		ae.ex1();
+			
+	}
+}

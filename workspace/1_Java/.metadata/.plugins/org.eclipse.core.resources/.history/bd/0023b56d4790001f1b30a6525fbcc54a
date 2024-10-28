@@ -1,0 +1,17 @@
+package edu.kh.control.loop;
+
+public class LoopRun2 {
+	public static void main(String[] args) {
+		
+		LoopExample2 loopEx2 = new LoopExample2();
+		
+		loopEx2.ex1();
+		loopEx2.ex2();
+		loopEx2.ex3();
+		loopEx2.ex4();
+		loopEx2.ex5();
+		loopEx2.ex6();
+		
+	}
+
+}

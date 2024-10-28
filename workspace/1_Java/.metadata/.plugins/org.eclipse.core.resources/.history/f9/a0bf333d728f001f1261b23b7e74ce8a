@@ -1,0 +1,149 @@
+package edu.kh.control.condition;
+
+import java.util.Scanner;
+
+public class SwitchExample { // 기능용 클래스
+	
+	/* switch문
+	 * - 식 하나의 결과로 많은 경우의 수를 처리할 때 사용하는 조건문
+	 * -> 식의 결과의 맞는 case 구문이 수행됨
+	 * 
+	 * [작성법]
+	 * 
+	 * switch(식) {
+	 * 
+	 * case 결과 1 : 결과1의 수행코드; break;
+	 * case 결과 2 : 결과2의 수행코드; break;
+	 * case 결과 3 : 결과3의 수행코드; break;
+	 * ...
+	 * default : 모든 case가 만족하지 못할 때 수행할 코드;
+	 * }
+	 * 
+	 * */
+
+	public void ex1() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("정수 입력 : ");
+		int i = sc.nextInt();
+		
+		String color;
+
+		// 키보드로 정수를 입력 받아
+		// 1. : RED
+		// 2. : Orange
+		// 3. : YELLOW
+		// 4. : GREEN
+		// 5. : BLUE
+		// 1~5가 아니면 : WHITE
+		
+//		// if 버전
+//		if(i == 1) {
+//			color = "RED";
+//			
+//		} else if(i == 2) {
+//			color = "Orange";
+//		
+//		} else if(i == 3) {
+//			color = "YELLOW";
+//		
+//		} else if(i == 4) {
+//			color = "GREEN";
+//		
+//		} else if(i == 5) {
+//			color = "BLUE";
+//		
+//		} else {
+//			color = "WHITE";
+//		}
+		
+		// switch 버전
+			// 여러 값이 나오는 식
+		switch(i) {
+		case 1 : color = "RED"; break;
+		// i 에 입력된 값이 1인 경우(case)
+		// color 변수에 "RED"를 대입하고 switch문을 멈춤(break)
+		
+		case 2 : color = "Orange"; break;
+		case 3 : color = "YELLOW"; break;
+		case 4 : color = "GREEN"; break;
+		case 5 : color = "BLUE"; break;
+		
+		default : color = "WHITE";
+		// default == 기본값
+		}
+		
+		System.out.println(color);
+	}
+	
+	public void ex2() {
+		
+		// 음료 결정 프로그램
+		// 난수(Math.random() ), switch문
+		
+		// 1부터 5사이의 난수를 발생시켜서
+		// 일치하는 수의 메뉴를 출력
+		
+		// Math.random() : 0.0 <= x < 1.0
+		// Math.random() * 5 : 0.0 <= x * 5 < 5.0
+		// Math.random() * 5 + 1 : 1.0 <= x * 5 + 1 < 6.0
+		// (int)(Math.random() * 5 + 1) : 1 <= (int)(x * 5 + 1) < 6
+		
+		// 1 ~ 7 난수 생성
+		int randomNumber = (int)(Math.random() * 5  + 1);
+		String menu = null; // null : 참조하는 것이 없다.
+		
+		switch(randomNumber) {
+		case 1 : menu = "아이스 아메리카노"; break;
+		case 2 : menu = "바닐라 라떼"; break;
+		case 3 : menu = "녹차 라떼"; break;
+		case 4 : menu = "아인슈페너"; break;
+		case 5 : menu = "쑥 라떼"; break;
+		}
+		
+		System.out.printf("가위바위보 진사람이 [%s] 사주기", menu);
+	}
+	
+	public void ex3() {
+		
+		// 달(월) 입력 시 계절 판별
+		Scanner sc = new Scanner(System.in);
+		System.out.println("정수 입력 : ");
+		
+		int i = sc.nextInt();
+		String season = null;
+
+		i /= 3; // 1~2 = 0, 12 = 4
+				// 3~5 = 1
+				// 6~8 = 2
+				// 9~11 = 3
+		switch(i) {
+		case 0 : season = "겨울"; break;
+		case 1 : season = "봄"; break;
+		case 2 : season = "여름"; break;
+		case 3 : season = "가을"; break;
+		case 4 : season = "겨울"; break;
+		}
+		System.out.println(season);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

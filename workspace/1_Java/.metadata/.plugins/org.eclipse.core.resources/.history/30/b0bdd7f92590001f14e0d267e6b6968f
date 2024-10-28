@@ -1,0 +1,11 @@
+package edu.kh.control.loop;
+
+public class LoopExRun1 {
+	
+	public static void main(String[] args) {
+		
+		LoopExample1 loopEx = new LoopExample1();
+		
+		loopEx.ex1();
+	}
+}

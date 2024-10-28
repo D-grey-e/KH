@@ -1,0 +1,172 @@
+package edu.kh.control.practice;
+
+import java.util.Scanner;
+
+public class ConditionPractice {
+
+	public void practice1() {
+
+		Scanner sc = new Scanner(System.in);
+
+
+		System.out.println("숫자 한 개 입력하세요 : ");
+		int i = sc.nextInt();
+
+		String str; // 결과 저장용 변수
+		
+//		// 강사쌤 VER1
+//		if(i > 0) { // 양수
+//			
+//			if(i % 2 ==0) { // 짝수
+//				str = "짝수입니다.";
+//				
+//			}else {
+//				str = "홀수입니다.";
+//			}
+//		}else {
+//			str = "양수만 입력헤주세요";
+//			
+//		}
+
+//		// 강사쌤 VER2
+//		if(i > 0 && i % 2 == 0) {
+//			System.out.println("짝수입니다.");
+//			
+//		} else if(i > 0 && i % 2 != 0) {
+//			System.out.println("홀수입니다.");
+//			
+//		} else {
+//			System.out.println("양수만 입력해주세요.");
+//		}
+			
+		
+		// 내 VER2
+		if(i <= 0) { 
+			System.out.println("양수를 입력해 주세요");
+
+		} else if(i % 2 != 0) {
+			System.out.println("홀수입니다.");
+			
+		} else {
+			System.out.println("짝수입니다.");
+		}
+		
+	}
+	public void practice2() {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("국어 점수 :");
+		int ks = sc.nextInt();
+
+		System.out.println("영어 점수 :");
+		int es = sc.nextInt();
+		
+		System.out.println("수학 점수 :");
+		int ms = sc.nextInt();
+		
+		int sum = ks + es + ms;
+		
+		double mean = sum / 3;
+		
+		String str;
+		
+//		//혜선썜 VER
+//		if(ks >= 40 && es >= 40 && ms >= 40 && mean >= 60) { // 합격
+//			System.out.println("국어 : " + ks);
+//			System.out.println("영어 : " + es);
+//			System.out.println("수학 : " + ms);
+//			System.out.println("합계 : " + sum);
+//			System.out.println("평균 : " + mean);
+//			System.out.println("합격입니다!");
+//			
+//		} else { // 불합격
+//			System.out.println("불합격입니다.");
+//			
+//		}
+		
+		
+		// 내 VER
+		if(ks < 40) {
+			str = "불합격 입니다.";
+			
+		} else if(es < 40) {
+			str = "불합격 입니다.";
+			
+		} else if(ms < 40) {
+			str = "불합격 입니다.";
+			
+		} else if(mean < 60) {
+			str = "불합격 입니다.";
+			
+		} else {
+			str = "합격입니다!";
+		}
+		System.out.printf(" 국어 : %d \n 영어 : %d \n 수학 : %d \n 합계 : %d \n 평균 : %f \n %s \n",
+							ks, es, ms, sum, mean, str);
+//		System.out.println("국어 : " + ks);
+//		System.out.println("영어 : " + es);
+//		System.out.println("수학 : " + ms);
+//		System.out.println("합계 : " + sum);
+//		System.out.println("평균 : " + mean);
+//		System.out.println(str);
+		
+	}
+	public void practice3() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("1~12 사이의 정수 입력 : ");
+		int i = sc.nextInt();
+		
+		String str;
+		
+		// 혜선썜 VER
+		int day = 0; // 해당하는 달의 마지막 일(날짜)을 저장
+		
+		
+		switch(i) {
+		case 1 : case 3: case 5: case 7: case 8: case 10: case 12: day = 31;
+		case 4 : case 6: case 9: case 11: day = 30;
+		case 2: day = 28;
+		
+		default : 
+		}
+		System.out.printf("%d월은 %d일까지 있습니다.", i, day);
+		
+		
+//		//내 VER
+//		switch(i) {
+//		case 1 	: case 3 : case 5 :case 7 : 
+//		case 8 : case 10 : case 12 : str = i + "월은 31일까지 있습니다.";
+//		break;
+//		
+//		case 4 	: case 6 :case 9 : case 11 : str = i + "월은 30일까지 있습니다.";
+//		break;
+//		
+//		case 2 	: str = i + "월은 28일까지 있습니다."; break; 
+//		
+//		default : str = i + "월은 잘못 입력된 달입니다.";
+//		}
+//		
+//		System.out.println(str);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

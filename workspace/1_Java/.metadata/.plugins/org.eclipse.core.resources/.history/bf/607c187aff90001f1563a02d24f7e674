@@ -1,0 +1,41 @@
+package edu.kh.note.book;
+
+import java.util.Scanner;
+
+public class Notebook {
+       
+    public void ex1() {
+    	Scanner sc = new Scanner(System.in);
+    	int number = sc.nextInt();
+    	int answer = 0;
+    	
+    	for(int i=0; i<1; i++){
+    		answer += number % 100;
+    		number /= 100;
+    	}
+    	
+    	System.out.println(answer + number);
+    }
+
+	public void ex2() {
+
+		int[] answer = {0, 0, 0, 0, 0};
+		String[] basic_order = {"check", "call", "pressure", "respiration", "repeat"};
+		
+		System.out.println(answer[3]);
+		System.out.printf(equals(basic_order[0]));
+		
+	}
+	
+	public void ex3() {
+		
+	}
+	public void ex4() {
+		
+	}
+	public void ex5() {
+		
+	}
+    
+    
+}

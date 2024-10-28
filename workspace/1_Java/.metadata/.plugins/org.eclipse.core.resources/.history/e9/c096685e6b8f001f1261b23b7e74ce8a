@@ -1,0 +1,82 @@
+package edu.kh.control.condition;
+
+import java.util.Scanner;
+
+public class SwitchExample { // 기능용 클래스
+	
+	/* switch문
+	 * - 식 하나의 결과로 많은 경우의 수를 처리할 때 사용하는 조건문
+	 * -> 식의 결과의 맞는 case 구문이 수행됨
+	 * 
+	 * [작성법]
+	 * 
+	 * switch(식) {
+	 * 
+	 * case 결과 1 : 결과1의 수행코드; break;
+	 * case 결과 2 : 결과2의 수행코드; break;
+	 * case 결과 3 : 결과3의 수행코드; break;
+	 * ...
+	 * default : 모든 case가 만족하지 못할 때 수행할 코드;
+	 * }
+	 * 
+	 * */
+
+	public void ex1() {
+		Scanner sc = new Scanner(System.in);
+		
+		// 키보드로 정수를 입력 받아
+		// 1. : RED
+		// 2. : Orange
+		// 3. : YELLOW
+		// 4. : GREEN
+		// 5. : BLUE
+		// 1~5가 아니면 : WHITE
+		
+		// if 버전
+		
+		System.out.println("정수 입력 : ");
+		int i = sc.nextInt();
+		
+		String color;
+		
+		if(i == 1) {
+			color = "RED";
+			
+		} else if(i == 2) {
+			color = "Orange";
+		
+		} else if(i == 3) {
+			color = "YELLOW";
+		
+		} else if(i == 4) {
+			color = "GREEN";
+		
+		} else if(i == 5) {
+			color = "BLUE";
+		
+		} else {
+			
+		}
+		System.out.println(color);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

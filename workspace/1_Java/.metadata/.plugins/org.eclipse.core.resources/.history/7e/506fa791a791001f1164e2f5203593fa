@@ -1,0 +1,66 @@
+package edu.kh.control.loop;
+
+import java.util.Scanner;
+
+public class LoopExample3 {
+	
+	/* while 문
+	 * - 반복 조건만을 설정하는 반복문으로
+	 * 	별도의 초기식, 증감식이 존재하지 않음
+	 * 
+	 * -조건식이 true인 경우에 계속 반복
+	 * -> 조건식이 false가 되는 상황을 같이 구현해야함
+	 * 
+	 * [작성법]
+	 * while(조건식) {
+	 * 		조건식이 true일 때 수행할 구문;
+	 * 		(+ 조건식이 특정 상황에서 false가 되도록 하는 구문도 같이 작성
+	 * 			-> 안하면 무한루프)
+	 * }
+	 * */
+	
+	public void ex1() {
+		// 숫자 0이 입력될 때 까지 프로그램 종료 X
+		Scanner sc = new Scanner(System.in);
+		
+		int input = 0;
+		
+		while (input != 0) { // input이 0이 아닐 때 true
+			System.out.print("숫자를 입력해주세요 : ");
+			input = sc.nextInt();
+		}
+		
+		
+		
+	}
+	
+	public void ex2() {
+		
+		
+	}
+	
+	public void ex3() {
+		
+		
+	}
+	
+	public void ex4() {
+		
+		
+	}
+	
+	public void ex5() {
+		
+		
+	}
+	
+	public void ex6() {
+		
+		
+	}
+	
+	public void ex7() {
+		
+		
+	}
+}
